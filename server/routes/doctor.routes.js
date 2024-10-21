@@ -5,8 +5,6 @@ const router = Router();
 
 
 router.post('/register', doctorController.registerDoctor);
-
-
 router.post('/login', doctorController.loginDoctor);
 
 export default router;

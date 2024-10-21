@@ -21,7 +21,7 @@ const submitHandler = async (e) => {
     localStorage.setItem('token', token);
     setSuccess(`Welcome, Dr. ${doctor.name}!`);
     setError('');
-    navigate (`/${doctor.name}/home`);
+    navigate (`/${doctorName}/home`);
     } catch (err) {
     setError('Invalid credentials, please try again.');
     setSuccess(``);

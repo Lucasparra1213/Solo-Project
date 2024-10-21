@@ -27,7 +27,7 @@ const Update = ({ setCurrentPatient }) => {
 
     const updateHandler = (e) => {
         e.preventDefault();
-        axios.put(`http://localhost:8005/api/patients/${id}`, { // Update the URL to /patients
+        axios.put(`http://localhost:8005/api/patients/${id}`, { 
             age: age,
             name: name,
             observations: observations,

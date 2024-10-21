@@ -6,11 +6,11 @@ import Login from './assets/components/login';
 import SignUp from './assets/components/Signup';
 import Home from './assets/components/home';
 import AdmitPatient from './assets/components/admitPatient';
-import Details from './assets/components/Details'; // Import Details component
-import Update from './assets/components/Update'; // Import Update component
+import Details from './assets/components/Details'; 
+import Update from './assets/components/Update'; 
 
 function App() {
-  const [currentPatient, setCurrentPatient] = useState(null); // Use state to store the current patient
+  const [currentPatient, setCurrentPatient] = useState(null); 
 
   return (
     <>

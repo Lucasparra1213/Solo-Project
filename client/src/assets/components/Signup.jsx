@@ -9,7 +9,7 @@ const [formData, setFormData] = useState({
     name: ''
   });
   const [message, setMessage] = useState('');
-  const navigate = useNavigate(); // Hook to programmatically navigate
+  const navigate = useNavigate(); 
 
   const handleChange = (e) => {
     setFormData({
@@ -21,7 +21,7 @@ const [formData, setFormData] = useState({
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // Send registration data to the server
+      
       const response = await axios.post('http://localhost:8005/api/register', formData);
       setMessage('Profile created successfully!');
     } catch (err) {
@@ -69,10 +69,10 @@ const [formData, setFormData] = useState({
         <button type="submit" className="btn btn-primary w-100">Sign Up</button>
       </form>
 
-      {/* Display message after submission */}
+      
       {message && <p className="text-center mt-3">{message}</p>}
 
-      {/* Button to go back to login */}
+      
       <div className="text-center mt-3">
         <button className="btn btn-secondary" onClick={() => navigate('/')}>
           Back to Login

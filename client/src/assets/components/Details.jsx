@@ -8,7 +8,7 @@ const Details = ({ setCurrentPatient }) => {
     const navigate = useNavigate();
 
     const dischargeHandler = () => {
-        axios.delete(`http://localhost:8005/api/patients/${id}`) // Update the URL to /patients
+        axios.delete(`http://localhost:8005/api/patients/${id}`) 
             .then((res) => {
                 navigate (`/${doctorName}/home`);
             })
@@ -18,7 +18,7 @@ const Details = ({ setCurrentPatient }) => {
     };
 
     useEffect(() => {
-        axios.get(`http://localhost:8005/api/patients/${id}`) // Update the URL to /patients
+        axios.get(`http://localhost:8005/api/patients/${id}`) 
             .then((res) => {
                 setPatient(res.data);
                 setCurrentPatient(res.data);

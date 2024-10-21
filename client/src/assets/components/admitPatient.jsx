@@ -26,9 +26,9 @@ const submitHandler = (e) => {
     .catch((err) => {
         console.log(err);
         if (err.response && err.response.data && err.response.data.errors) {
-          setErrors(err.response.data.errors); // Safely handle errors
+          setErrors(err.response.data.errors); 
         } else {
-          setErrors({ general: 'An error occurred' }); // Handle non-validation errors
+          setErrors({ general: 'An error occurred' }); 
         }
     });
 };
@@ -38,7 +38,7 @@ return (
     <h2 className="text-center mb-4">Register a Patient</h2>
 
     <form onSubmit={submitHandler} className="w-50 mx-auto">
-        {/* Age Input */}
+        
         <div className="mb-3">
         <label className="form-label">Age</label>
         <input
@@ -48,10 +48,10 @@ return (
             placeholder="Age..."
             onChange={(e) => setAge(e.target.value)}
         />
-          {errors && errors.age && <p className="text-danger">{errors.age.message}</p>} {/* Safely check errors.age */}
+          {errors && errors.age && <p className="text-danger">{errors.age.message}</p>} 
         </div>
 
-        {/* Name Input */}
+        
         <div className="mb-3">
         <label className="form-label">Name</label>
         <input
@@ -61,10 +61,10 @@ return (
             placeholder="Name..."
             onChange={(e) => setName(e.target.value)}
         />
-          {errors && errors.name && <p className="text-danger">{errors.name?.message}</p>} {/* Safely check errors.name */}
+          {errors && errors.name && <p className="text-danger">{errors.name?.message}</p>} 
         </div>
 
-        {/* Observations Input */}
+        
         <div className="mb-3">
         <label className="form-label">Observations</label>
         <input
@@ -74,10 +74,10 @@ return (
             placeholder="Observations..."
             onChange={(e) => setObservations(e.target.value)}
         />
-          {errors && errors.observations && <p className="text-danger">{errors.observations?.message}</p>} {/* Safely check errors.observations */}
+          {errors && errors.observations && <p className="text-danger">{errors.observations?.message}</p>} 
         </div>
 
-        {/* Appointments Input */}
+        
         <div className="mb-3">
         <label className="form-label">Appointments</label>
         <input
@@ -87,13 +87,13 @@ return (
             placeholder="Next Appointment..."
             onChange={(e) => setAppointments(e.target.value)}
         />
-          {errors && errors.appointments && <p className="text-danger">{errors.appointments?.message}</p>} {/* Safely check errors.appointments */}
+          {errors && errors.appointments && <p className="text-danger">{errors.appointments?.message}</p>} 
         </div>
 
-        {/* General error */}
-        {errors.general && <p className="text-danger">{errors.general}</p>} {/* Handle general errors */}
+        
+        {errors.general && <p className="text-danger">{errors.general}</p>} 
 
-        {/* Submit Button */}
+        
         <button type="submit" className="btn btn-primary w-100">Admit</button>
         <button className="btn btn-secondary mt-3" onClick={() => navigate(`/${doctorName}/home`)}>Home</button>
     </form>
